@@ -174,38 +174,6 @@ public class home extends AppCompatActivity {
         }));
 
     }
-    private class OnItemClick implements AdapterView.OnItemClickListener
-    { public void onItemClick(AdapterView<?>arg0, View arg1, int arg2, long arg3){
-        ListView list = (ListView) findViewById(R.id.vi);
-
-
-    }
-    }
-    private class OnItemLongClick implements AdapterView.OnItemLongClickListener {
-        public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-
-            ListView list = (ListView) findViewById(R.id.vi);
-            HashMap<String, Object> map = (HashMap<String, Object>) list.getItemAtPosition(arg2);
-            String name1;
-            info = map.get("id").toString();
-            name1 = map.get("tt").toString();
-            AlertDialog myAlertDialog = new AlertDialog.Builder(home.this)
-                    .setTitle("確認")
-                    .setMessage("確定刪除“" + name1 + "”嗎？")
-                    .setPositiveButton("是", new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int whichButton) {
-                            mytable.delete(info);
-                            Toast.makeText(getApplicationContext(), "删除成功", Toast.LENGTH_SHORT).show();
-                            onResume();
-                        }
-                    })
-                    .setNegativeButton("否", null)
-                    .show();
-
-            return true;
-
-        }
-    }
     /**
      * 取得將檔案寫入手機的權限
      */
