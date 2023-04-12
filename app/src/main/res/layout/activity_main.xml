@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/others"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="16dp"
+        android:text="其他"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/excercise" />
+
+    <ListView
+        android:id="@+id/output"
+        android:layout_width="410dp"
+        android:layout_height="227dp"
+        android:layout_marginBottom="4dp"
+        android:maxLines="20"
+        android:scrollbars="vertical"
+        android:singleLine="false"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <TextView
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="24dp"
+        android:text="Download"
+        android:textColor="#3F51B5"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/EditOld"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:text="Reset"
+        android:textColor="#3F51B5"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/EditOld"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/walk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="16dp"
+        android:text="走路"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/stand"
+        app:layout_constraintEnd_toStartOf="@+id/up_stairs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/download"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/up_stairs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="16dp"
+        android:text="上樓"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/sit"
+        app:layout_constraintEnd_toStartOf="@+id/down_stairs"
+        app:layout_constraintStart_toEndOf="@+id/walk"
+        app:layout_constraintTop_toBottomOf="@+id/EditOld" />
+
+    <TextView
+        android:id="@+id/down_stairs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
+        android:text="下樓"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/lie_down"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/up_stairs"
+        app:layout_constraintTop_toBottomOf="@+id/reset"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/sit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="16dp"
+        android:text="坐下"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/others"
+        app:layout_constraintEnd_toStartOf="@+id/lie_down"
+        app:layout_constraintStart_toEndOf="@+id/stand" />
+
+    <TextView
+        android:id="@+id/stand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="16dp"
+        android:text="站立"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/excercise"
+        app:layout_constraintEnd_toStartOf="@+id/sit"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lie_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="16dp"
+        android:text="躺下"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/others"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/sit" />
+
+    <TextView
+        android:id="@+id/excercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginBottom="16dp"
+        android:text="運動"
+        android:textColor="#000000"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/output"
+        app:layout_constraintEnd_toStartOf="@+id/others"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/EditOld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="48dp"
+        android:inputType="textPersonName"
+        android:text="Add"
+        android:textColor="#3F51B5"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/reset"
+        app:layout_constraintStart_toEndOf="@+id/download"
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="179dp"
+        android:text="TextView"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
